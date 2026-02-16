@@ -2,10 +2,11 @@ n = ["Picard", "Riker", "Data", "Worf"]
 r = ["Captain", "Commander", "Lt. Commander", "Lieutenant"]
 d = ["Command", "Command", "Operations", "Security"]
 
-active = True
+# active = True
+ACtive == True
 
 def run_system_monolith():
-    print("BOOTING SYSTEM...")
+    print("BOOTING SYSTEM...") 
     print("...")
     print("WELCOME TO FLEET COMMAND")
     
@@ -13,8 +14,9 @@ def run_system_monolith():
     loading = 0
     while loading < 5:
         print("Loading module " + str(loading))
+        loading += 1
         
-    
+        
     while True:
         print("\n--- MENU ---")
         print("1. View Crew")
@@ -29,7 +31,8 @@ def run_system_monolith():
             print("Current Crew List:")
             
             for i in range(10):
-                print(n[i] + " - " + r[i]) 
+                # print(n[i] + " - " + r[i]) 
+                range(len(n))
                 
         elif opt == "2":
             new_name = input("Name: ")
@@ -42,7 +45,9 @@ def run_system_monolith():
             
         elif opt == "3":
             rem = input("Name to remove: ")
-           
+            
+           if rem in n:
+               
             idx = n.index(rem)
             n.pop(idx)
             r.pop(idx)
@@ -54,9 +59,11 @@ def run_system_monolith():
             count = 0
             
             for rank in r:
-                if rank == "Captain" or "Commander": 
+                # if rank == "Captain" or "Commander": 
+                     if rank == "Captain" or rank == "Commander": 
                     count = count + 1
-            print("High ranking officers: " + count) 
+           # print("High ranking officers: " + count) 
+                         str(count)
             
         elif opt == "5":
             print("Shutting down.")
@@ -88,4 +95,5 @@ def run_system_monolith():
             
         print("End of cycle.")
 
-run_system_monolith
+# run_system_monolith
+run_system_monolith()
