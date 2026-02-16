@@ -2,7 +2,8 @@ n = ["Picard", "Riker", "Data", "Worf"]
 r = ["Captain", "Commander", "Lt. Commander", "Lieutenant"]
 d = ["Command", "Command", "Operations", "Security"]
 
-active = True
+# active = True not an assignment
+active == True
 
 def run_system_monolith():
     print("BOOTING SYSTEM...")
@@ -28,7 +29,8 @@ def run_system_monolith():
         if opt = "1":  
             print("Current Crew List:")
             
-            for i in range(10):
+            # for i in range(10): Looping to 10 causes IndexError.
+                for i in range(len(n)):
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
